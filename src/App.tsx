@@ -1,20 +1,21 @@
-import {useCallback, useState} from 'react';
-import './App.css';
-import MissionContainer from './components/Mission';
-import MissionInfo from './components/MissionInfo/index'
+import React from 'react';
+import LaunchList from './components/LaunchList';
+import LaunchProfile from './components/LaunchProfile';
 
-function App() {
-  const [id, setId] = useState(42);
-  const handleChangeId = useCallback(newID => {
-    setId(newID);
+import './App.css';
+
+const App = () => {
+  const [id, setId] = React.useState(42);
+  const handleIdChange = React.useCallback(newId => {
+    setId(newId);
   }, []);
 
   return (
-    <div>
-       <MissionContainer  />
-       <MissionInfo />
+    <div className="App">
+      <LaunchList handleIdChange={handleIdChange} />
+      <LaunchProfile id={id} />
     </div>
   );
-}
+};
 
 export default App;
