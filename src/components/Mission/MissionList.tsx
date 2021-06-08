@@ -15,6 +15,7 @@ const MissionList: React.FC<Props> = ({data}) => {
                     key = {index}
                 > 
                     {launchObj?.mission_name}
+
                 </li>
      ) )}
             </ul>

@@ -4,7 +4,7 @@ import MissionInfo from './MissionInfo';
 const MissionInfoContainer = () => {
     const { data, error, loading } = useLaunchMissionInfoQuery({
         variables: {
-            id: '25'
+            id: '1'
         },
     });
     if (loading)
